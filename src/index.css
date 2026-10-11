@@ -1,0 +1,526 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-family: "Inter", sans-serif;
+    color: #f7f7ee;
+    background: #11120f;
+    font-synthesis: none;
+}
+
+body {
+    min-width: 320px;
+    min-height: 100vh;
+    background: #11120f;
+}
+
+button,
+input,
+select {
+    font-family: inherit;
+}
+
+.app {
+    position: relative;
+    min-height: 100vh;
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at 50% 15%,
+            rgba(239, 255, 79, 0.08),
+            transparent 35%
+        ),
+        linear-gradient(
+            135deg,
+            #11120f 0%,
+            #151610 50%,
+            #0e0f0c 100%
+        );
+}
+
+/* =========================
+   Header
+   ========================= */
+
+.header {
+    position: relative;
+    z-index: 2;
+
+    max-width: 1100px;
+    margin: auto;
+    padding: 28px 30px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    font-size: 20px;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+}
+
+.logo-mark {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 34px;
+    height: 34px;
+
+    background: #efff4f;
+    color: #11120f;
+
+    border-radius: 9px;
+
+    font-weight: 900;
+
+    box-shadow:
+        0 0 20px rgba(239, 255, 79, 0.12);
+}
+
+.badge {
+    padding: 7px 12px;
+
+    border: 1px solid rgba(255, 255, 255, 0.10);
+    border-radius: 999px;
+
+    color: #999c91;
+
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1px;
+
+    background: rgba(255, 255, 255, 0.025);
+}
+
+/* =========================
+   Main
+   ========================= */
+
+.main {
+    position: relative;
+    z-index: 2;
+
+    max-width: 720px;
+    margin: auto;
+
+    padding: 80px 24px 120px;
+}
+
+/* =========================
+   Hero
+   ========================= */
+
+.hero {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.eyebrow {
+    display: inline-block;
+
+    color: #efff4f;
+
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 2px;
+
+    margin-bottom: 18px;
+
+    text-shadow:
+        0 0 20px rgba(239, 255, 79, 0.15);
+}
+
+.hero h1 {
+    font-size: clamp(42px, 7vw, 72px);
+    line-height: 0.98;
+
+    letter-spacing: -4px;
+
+    font-weight: 800;
+
+    color: #f7f7ee;
+}
+
+.hero h1 span {
+    display: block;
+
+    color: #efff4f;
+
+    text-shadow:
+        0 0 30px rgba(239, 255, 79, 0.08);
+}
+
+.hero p {
+    max-width: 500px;
+    margin: 25px auto 0;
+
+    color: #8f9288;
+
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* =========================
+   Main Card
+   ========================= */
+
+.card {
+    padding: 30px;
+
+    background: rgba(35, 36, 30, 0.72);
+
+    border: 1px solid rgba(255, 255, 255, 0.09);
+    border-radius: 20px;
+
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+
+    box-shadow:
+        0 30px 80px rgba(0, 0, 0, 0.45),
+        inset 0 1px 0 rgba(255, 255, 255, 0.04),
+        0 0 60px rgba(239, 255, 79, 0.035);
+}
+
+/* =========================
+   Labels
+   ========================= */
+
+.card label {
+    display: block;
+
+    margin-bottom: 9px;
+
+    color: #85887d;
+
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+}
+
+/* =========================
+   Inputs
+   ========================= */
+
+.input-wrapper {
+    margin-bottom: 24px;
+}
+
+input,
+select {
+    width: 100%;
+
+    padding: 16px 17px;
+
+    color: #f7f7ee;
+
+    background: rgba(15, 16, 13, 0.65);
+
+    border: 1px solid rgba(255, 255, 255, 0.09);
+    border-radius: 10px;
+
+    outline: none;
+
+    font-size: 14px;
+
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease,
+        background 0.2s ease;
+}
+
+input::placeholder {
+    color: #55584f;
+}
+
+input:hover,
+select:hover {
+    border-color: rgba(255, 255, 255, 0.14);
+}
+
+input:focus,
+select:focus {
+    border-color: #efff4f;
+
+    background: rgba(20, 21, 17, 0.75);
+
+    box-shadow:
+        0 0 0 3px rgba(239, 255, 79, 0.07),
+        0 0 25px rgba(239, 255, 79, 0.035);
+}
+
+select {
+    margin-bottom: 22px;
+
+    appearance: none;
+
+    cursor: pointer;
+}
+
+/* =========================
+   Main Button
+   ========================= */
+
+.card form > button {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+
+    padding: 16px;
+
+    border: none;
+    border-radius: 10px;
+
+    background: #efff4f;
+    color: #11120f;
+
+    font-size: 12px;
+    font-weight: 900;
+    letter-spacing: 1px;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 8px 25px rgba(239, 255, 79, 0.08);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        background 0.2s ease;
+}
+
+.card form > button:hover:not(:disabled) {
+    transform: translateY(-2px);
+
+    background: #f3ff70;
+
+    box-shadow:
+        0 12px 35px rgba(239, 255, 79, 0.16);
+}
+
+.card form > button:active:not(:disabled) {
+    transform: translateY(0);
+}
+
+.card form > button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+/* =========================
+   Error
+   ========================= */
+
+.error {
+    margin-bottom: 15px;
+    padding: 12px;
+
+    border: 1px solid rgba(255, 90, 90, 0.25);
+    border-radius: 8px;
+
+    background: rgba(90, 20, 20, 0.25);
+    color: #ff8585;
+
+    font-size: 13px;
+}
+
+/* =========================
+   Result
+   ========================= */
+
+.result {
+    margin-top: 25px;
+    padding-top: 25px;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.result-label {
+    margin-bottom: 10px;
+
+    color: #85887d;
+
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+}
+
+.result-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    padding: 5px;
+
+    background: rgba(15, 16, 13, 0.65);
+
+    border: 1px solid rgba(255, 255, 255, 0.09);
+    border-radius: 10px;
+
+    backdrop-filter: blur(10px);
+}
+
+.result-row a {
+    flex: 1;
+
+    padding: 10px;
+
+    overflow: hidden;
+
+    color: #efff4f;
+
+    font-size: 13px;
+    font-weight: 500;
+
+    text-decoration: none;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+
+    transition: color 0.2s ease;
+}
+
+.result-row a:hover {
+    color: #f5ff91;
+}
+
+.copy-button {
+    padding: 10px 15px;
+
+    border: 0;
+    border-radius: 7px;
+
+    background: #efff4f;
+    color: #11120f;
+
+    font-size: 10px;
+    font-weight: 900;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease;
+}
+
+.copy-button:hover {
+    background: #f3ff70;
+    transform: translateY(-1px);
+}
+
+/* =========================
+   Footer
+   ========================= */
+
+footer {
+    position: absolute;
+    bottom: 25px;
+    left: 0;
+    right: 0;
+
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+
+    color: #55584f;
+
+    font-size: 11px;
+}
+
+/* =========================
+   Background Glow
+   ========================= */
+
+.glow {
+    position: absolute;
+
+    width: 400px;
+    height: 400px;
+
+    background: rgba(239, 255, 79, 0.035);
+
+    filter: blur(100px);
+
+    border-radius: 50%;
+
+    pointer-events: none;
+}
+
+.glow-one {
+    top: 100px;
+    left: -200px;
+}
+
+.glow-two {
+    right: -200px;
+    bottom: 100px;
+}
+
+/* =========================
+   Mobile
+   ========================= */
+
+@media (max-width: 600px) {
+
+    .header {
+        padding: 20px;
+    }
+
+    .badge {
+        display: none;
+    }
+
+    .main {
+        padding-top: 55px;
+    }
+
+    .hero h1 {
+        letter-spacing: -2.5px;
+    }
+
+    .hero p {
+        font-size: 14px;
+    }
+
+    .card {
+        padding: 20px;
+
+        border-radius: 16px;
+    }
+
+    .result-row {
+        flex-direction: row;
+    }
+
+    .result-row a {
+        min-width: 0;
+    }
+
+    footer {
+        position: relative;
+
+        padding: 20px;
+
+        flex-direction: column;
+        align-items: center;
+
+        gap: 8px;
+    }
+}
